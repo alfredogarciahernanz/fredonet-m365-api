@@ -1,0 +1,25 @@
+services:
+
+  fredonet-m365-api:
+
+    build: .
+
+    container_name: fredonet-m365-api
+
+    restart: unless-stopped
+
+    env_file:
+      - .env
+
+    ports:
+      - "127.0.0.1:8801:8000"
+
+    networks:
+      - network_compose
+
+    security_opt:
+      - no-new-privileges:true
+
+networks:
+  network_compose:
+    external: true
