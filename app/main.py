@@ -58,7 +58,7 @@ app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://links.fredonet.net"],
+    allow_origins=["https://w3.fredonet.net"],
     allow_credentials=False,
     allow_methods=["GET"],
     allow_headers=["X-API-Key", "Content-Type"],
